@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<h1>My Orders</h1>{% for o in orders %}<div class="card"><b>{{o.order_no}}</b> · {{o.business_name}}<p class="status">{{o.status}}</p><a class="btn" href="/track/{{o.order_no}}">Track</a></div>{% else %}<div class="card">No orders yet.</div>{% endfor %}{% endblock %}
